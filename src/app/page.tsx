@@ -36,7 +36,7 @@ export default function Home() {
   };
   
    const EditQuote=(id:number)=>{
-    let QuoteObj:any= quote.find(item=>item.id === id)
+    const QuoteObj:any= quote.find(item=>item.id === id)
     setQuoteVal(QuoteObj.quote)
     setAuthorVal(QuoteObj.author)
     setQuoteId(QuoteObj.id)

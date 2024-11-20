@@ -15,12 +15,12 @@ export default async function DailyQuotes(){
     const responseQuote= await fetchQuotes.json();
     return(
         <div>
-            <h1 className="flex justify-center text-3xl text-purple-800 mb-32 underline">Today's post response</h1>
+            <h1 className="flex justify-center text-3xl text-purple-800 mb-32 underline">{`Today's post response`}</h1>
             <ol className="mt-5 ml-12">
                 {
                     responseQuote.map((items:any,index:number) => {
             return(            
-           <li><Link href={`/quotes/${items.id}/${items.postId}`}>{items.name}</Link></li>
+           <li><Link href={`/quotes/${items.id}/${items.postId}`} key={index}>{items.name}</Link></li>
            
             )
 }
